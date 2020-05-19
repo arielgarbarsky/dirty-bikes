@@ -1,0 +1,19 @@
+<div class="container col-12">
+  <%= render 'shared/navbar' %>
+
+  <br>
+<div class= "create-bike-form">
+      <div class="form-header">
+        Add the details of your bike:
+      </div>
+      <%= simple_form_for(@bike) do |f| %>
+      <%= f.input :name, placeholder: 'Brand'%>
+      <%= f.input :photo, as: :file %>
+      <%= f.button :submit, 'Send information', class: 'btn btn-dark' %>
+      <% end %>
+    </div>
+    <br>
+  </div>
+
+
+</div>

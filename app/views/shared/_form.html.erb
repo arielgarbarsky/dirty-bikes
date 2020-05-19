@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-xs-12 col-sm-6 mt-4">
+      <%= simple_form_for(bike) do |f| %>
+      <%= f.input :brand, collection: ["honda", "fantic", "ktm", "yamaha", "suzuki", "cyberquad"], include_blank: false %>
+      <%= f.input :price %>
+      <%= f.input :photo %>
+      <%= f.input :photo_cache, as: :hidden %>
+      <button class="btn button"><% f.button :submit%>Create a Dirt Bike</button>
+      <% end %>
+    </div>
+  </div>
+</div>
