@@ -6,7 +6,6 @@ ruby '2.6.5'
 # ~~ dirty-bikes-team DEV GEMS~~ 
 gem 'devise'
 gem 'faker', '~> 1.6', '>= 1.6.3'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3'
 # Use postgresql as the database for Active Record

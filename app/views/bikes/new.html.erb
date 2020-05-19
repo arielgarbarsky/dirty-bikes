@@ -2,18 +2,50 @@
   <%= render 'shared/navbar' %>
 
   <br>
-<div class= "create-bike-form">
-      <div class="form-header">
-        Add the details of your bike:
+  <br>
+  <br>
+
+  <div class="row" >
+    <div class="col-4">
+      <div class="card-container-image-simple-form">
+        <div class="card-category-image-simple-form" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1525012758503-e9e7c93032b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)">
+          <h1 class="title-image-card-simple-form">Experience the country by Dirt Bike!</h1>
+        </div>
       </div>
+    </div>
+
+    <div class= "create-bike-form col-4">
+      <strong>Add the details of your bike:</strong>
       <%= simple_form_for(@bike) do |f| %>
-      <%= f.input :name, placeholder: 'Brand'%>
-      <%= f.input :photo, as: :file %>
-      <%= f.button :submit, 'Send information', class: 'btn btn-dark' %>
+      <%= f.input :brand,collection: ["Honda", "Fantic", "KTM", "Yamaha", "Suzuki", "Cyberquad"], include_blank: false %>
+      <%= f.input :price, as: :numeric, placeholder: 'Price in Shekels (rounded)'%>
+      <%= f.input :location, collection: ["Israel"], include_blank: false %>
+      <%#= f.input :photo (WE HAVE TO DECIDE IF WE USE CLOUDINARY OR NOT... BECAUSE IT WAS NOT WORKING) %>
+      <%= f.button :submit, 'Create Dirt Bike', class: 'btn btn-dark' %>
       <% end %>
     </div>
-    <br>
+
+    <div class="col-4">
+      <div class="card-container-image-simple-form">
+        <div class="card-category-image-simple-form" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1453901593090-e57bfb58f39b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=801&q=80)">
+          <h1 class="title-image-card-simple-form">Live wonderful experiences with the best Dirt Bike!</h1>
+        </div>
+      </div>
+    </div>
   </div>
 
+  <br>
+  <br>
+  <br>
+  <br>
 
+  <div class="footer">
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
 </div>
