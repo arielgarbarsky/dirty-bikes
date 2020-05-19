@@ -10,3 +10,14 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar-bike-homepage {
+  justify-content: space-between;
+  background: white;
+}
+.navbar-bike-homepage .navbar-collapse {
+  flex-grow: 0;
+}
+.navbar-bike-homepage .navbar-brand img {
+  width: 40px;
+}
