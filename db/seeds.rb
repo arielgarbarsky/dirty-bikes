@@ -8,12 +8,10 @@ puts 'Creating Users...'
 
 users = []
 
-users << User.create!(first_name: 'bob', last_name: 'smith', username: 'bob1', email: 'bob@bob.com', password: '123456')
-
  5.times do
   first_name = Faker::Name.first_name
   last_name = Faker::Name.last_name
-  username = Faker::Internet.username(4)
+  username = Faker::Internet.username
   email = Faker::Internet.email
   password = Faker::Internet.password(8)
   users << User.create!(first_name: first_name, last_name: last_name, username: username, email: email, password: password)
