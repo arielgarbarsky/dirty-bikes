@@ -3,4 +3,5 @@ class Bike < ApplicationRecord
   has_many :bookings
 
   validates :brand, inclusion: { in: %w(honda fantic ktm yamaha suzuki cyberquad) }
+  validates :user, presence: true
 end
