@@ -6,7 +6,9 @@
   <div class="form-inputs">
     <%= f.input :rent_date %>
   </div>
-  <h2>Total price of rental: $<%= @bike.price %></p>
+
+  <h2>Total price of daily rental: $<%= @bike.price %></p>
+
   <div class="form-actions">
     <%= f.button :submit, "Book Dirt Bike!", class: "btn btn-success" %>
   </div>
