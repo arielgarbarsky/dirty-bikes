@@ -65,3 +65,25 @@
   color: black;
   grid-template-columns: 1fr 1fr 1fr;
 }
+
+.card-container-image-simple-form {
+  border: solid;
+  border-color: black;
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+}
+
+.card-category-image-simple-form {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.title-image-card-simple-form {
+  font-weight: bold;
+  font-size: 30px;
+  color: #f8f3eb;
+  vertical-align: middle;
+  text-align: center;
+}
