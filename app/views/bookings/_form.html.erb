@@ -1,0 +1,13 @@
+
+<%= simple_form_for([@bike, @booking]) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :rent_date %>
+  </div>
+  <h2>Total price of rental: $<%= @bike.price %></p>
+  <div class="form-actions">
+    <%= f.button :submit, "Book Dirt Bike!", class: "btn btn-success" %>
+  </div>
+<% end %>
