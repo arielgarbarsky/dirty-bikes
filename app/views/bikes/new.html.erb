@@ -1,10 +1,4 @@
 <div class="container col-12">
-  <%= render 'shared/navbar' %>
-
-  <br>
-  <br>
-  <br>
-
   <div class="row" >
     <div class="col-4">
       <div class="card-container-image-simple-form">
@@ -19,7 +13,8 @@
       <%= simple_form_for(@bike) do |f| %>
       <%= f.input :brand, collection: %w[Honda Fantic KTM Yamaha Suzuki Cyberquad], include_blank: false %>
       <%= f.input :price, as: :numeric, placeholder: 'List Price (shekels)'%>
-      <%= f.input :location, collection: ["Israel"], include_blank: false %>
+      <%= f.input :location, placeholder: 'Rishon' %>
+      <%= f.input :description, as: :text, placeholder: "Tell us in a few words why you're bike is the awesomest!" %>
       <%= f.input :photos, as: :file, input_html: { multiple: true } %>
       <%= f.button :submit, 'Create Dirt Bike', class: 'btn btn-dark' %>
       <% end %>
@@ -31,21 +26,6 @@
           <h1 class="title-image-card-simple-form">Live wonderful experiences with the best Dirt Bike!</h1>
         </div>
       </div>
-    </div>
-  </div>
-
-  <br>
-  <br>
-  <br>
-  <br>
-
-  <div class="footer">
-    <div class="footer-links">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
     </div>
   </div>
 </div>
