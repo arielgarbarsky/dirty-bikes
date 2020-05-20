@@ -24,6 +24,7 @@ class BikesController < ApplicationController
 
   def set_bike
     @bike = Bike.find(params[:id])
+  end
 
   def bike_params
     params.require(:bike).permit(:brand, :price, :location, photos: [])
