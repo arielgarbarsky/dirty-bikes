@@ -5,7 +5,6 @@
       <%= f.input :brand, collection: ["honda", "fantic", "ktm", "yamaha", "suzuki", "cyberquad"], include_blank: false %>
       <%= f.input :price %>
       <%= f.input :photo %>
-      <%= f.input :photo_cache, as: :hidden %>
       <button class="btn button"><% f.button :submit%>Create a Dirt Bike</button>
       <% end %>
     </div>

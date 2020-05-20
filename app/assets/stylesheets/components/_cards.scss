@@ -7,6 +7,50 @@
   text-align: center;
 }
 
+.full-card {
+  display:flex;
+  justify-content: center;
+}
+
+.card-bike {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 80%;
+}
+
+.card-bike > .bike-show-photo {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-bike h2 {
+  font-size: 18px;
+  font-weight: regular;
+  margin: 0;
+  text-transform: capitalize;
+  padding: 1px;
+}
+
+.card-bike p {
+  font-size: 16px;
+  opacity: .7;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+
+.card-bike .card-bike-infos {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  height: 150px;
+}
+
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards-bike-homepage {
@@ -137,6 +181,17 @@
   padding: 16px;
 }
 
-.button-card-index-page {
-  margin-top: 10px;
+
+.card-bike-detail {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.card-bike-detail > .bike-show-photo {
+  width: 100%;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
 }
