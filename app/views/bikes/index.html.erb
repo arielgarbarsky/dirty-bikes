@@ -1,13 +1,13 @@
-<div class="container col-12">
-  <div class="container-index-page-card">
-  <div class="cards-bike-index" style="width: 18rem;">
-    <% @bikes.each do |bike| %>
-    <img src="https://i2.wp.com/www.asphaltandrubber.com/wp-content/uploads/2019/03/Mugen-E-Rex-Hachi-electric-dirt-bike-02-scaled.jpg?fit=2560%2C1707&ssl=1" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h2 class="card-title"><%= bike.brand %></h5>
-      <p class="card-text"><%= bike.price %></p>
-      <a href="<%= bike_path(bike) %>" class="btn btn-dark stretched-link">Select this!</a>
+<div class="container container-cards-index-page">
+  <% @bikes.each do |bike| %>
+  <div class="card-product card-bike-index-page">
+    <img src="https://source.unsplash.com/random" />
+    <div class="card-product-infos">
+      <h2 class="card-title"><%= bike.brand %></h2>
+      <p class="card-text">$<%= bike.price %></p>
+      <p class="card-text">Pick up in: <%= bike.location %></p>
+      <a href="<%= bike_path(bike) %>" class="btn btn-dark">Select Bike</a>
     </div>
-    <% end %>
   </div>
+  <% end %>
 </div>
