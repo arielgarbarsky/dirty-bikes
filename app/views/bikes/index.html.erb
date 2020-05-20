@@ -1,58 +1,15 @@
-<div class="container col-12">
-  <%= render 'shared/navbar' %>
-
-  <br>
-
-  <div class="container-index-page-card col-4">
-    <div class="card-product-index">
-      <img class="image-inside-card-dirt-bike-index" src="https://i2.wp.com/www.asphaltandrubber.com/wp-content/uploads/2019/03/Mugen-E-Rex-Hachi-electric-dirt-bike-02-scaled.jpg?fit=2560%2C1707&ssl=1" />
-      <div class="card-product-infos">
-        <h2>Yamaha</h2>
-        <p><strong>Powerfull Dirt Bike! <br><br> Only ₪50 pair day!</strong></p>
+<div class="container container-cards-index-page">
+  <% @bikes.each do |bike| %>
+  <div class="card-product card-bike-index-page">
+    <img src="https://source.unsplash.com/random" />
+    <div class="card-product-infos">
+      <h2 class="card-title"><%= bike.brand %></h2>
+      <p class="card-text">$<%= bike.price %></p>
+      <p class="card-text">Pick up in: <%= bike.location %></p>
+      <div class="button-card-index-page">
+        <a href="<%= bike_path(bike) %>" class="btn-sm btn-dark">See more</a>
       </div>
-    </div>
-
-    <br>
-
-    <div class="card-product-index">
-      <img class="image-inside-card-dirt-bike-index" src="https://i2.wp.com/www.asphaltandrubber.com/wp-content/uploads/2019/03/Mugen-E-Rex-Hachi-electric-dirt-bike-02-scaled.jpg?fit=2560%2C1707&ssl=1" />
-      <div class="card-product-infos">
-        <h2>Yamaha</h2>
-        <p><strong>Powerfull Dirt Bike! <br><br> Only ₪50 pair day!</strong></p>
-      </div>
-    </div>
-
-
-    <br>
-
-    <div class="card-product-index">
-      <img class="image-inside-card-dirt-bike-index" src="https://i2.wp.com/www.asphaltandrubber.com/wp-content/uploads/2019/03/Mugen-E-Rex-Hachi-electric-dirt-bike-02-scaled.jpg?fit=2560%2C1707&ssl=1" />
-      <div class="card-product-infos">
-        <h2>Yamaha</h2>
-        <p><strong>Powerfull Dirt Bike! <br><br> Only ₪50 pair day!</strong></p>
-      </div>
-    </div>
-
-
-    <br>
-
-    <div class="card-product-index">
-      <img class="image-inside-card-dirt-bike-index" src="https://i2.wp.com/www.asphaltandrubber.com/wp-content/uploads/2019/03/Mugen-E-Rex-Hachi-electric-dirt-bike-02-scaled.jpg?fit=2560%2C1707&ssl=1" />
-      <div class="card-product-infos">
-        <h2>Yamaha</h2>
-        <p><strong>Powerfull Dirt Bike! <br><br> Only ₪50 pair day!</strong></p>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="footer">
-    <div class="footer-links">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
     </div>
   </div>
+  <% end %>
 </div>

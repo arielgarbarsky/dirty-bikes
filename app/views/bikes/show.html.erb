@@ -1,50 +1,17 @@
-<div class="page">
-  <%= render 'shared/navbar' %>
-  <br>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-xl-8">
-        <div class="row card-show-bike">
-          <div class="bike-img">
-            <img height="250" width="250" src="https://i2.wp.com/www.asphaltandrubber.com/wp-content/uploads/2019/03/Mugen-E-Rex-Hachi-electric-dirt-bike-02-scaled.jpg?fit=2560%2C1707&ssl=1">
-          </div>
-          <div class="col-6">
-            <div class="bike-info p-2">
-              <h1>White and Red Honda</h1>
-              <h2>Tel-Aviv</h2>
-            </div>
-            <div class="bike-price">
-              <h2>$50</h2>
-            </div>
-          </div>
-        </div>
-        <div class="row card-show-details">
-          <div class="col">
-            <div class="bike-details p-3">
-              <h2>Bike skills</h2>
-              <ul>
-                <li>150cc</li>
-                <li>Fast</li>
-                <li>Comfy</li>
-              </ul>
-            </div>
-          </div>
-            <div class="col align-items-center">
-              <div class="bike-description p-3">
-                <p>This bike will definitely impress your ex-girlfriend</p>
-              </div>
-            </div>
-        </div>
+<div class="container">
+  <div class="card-bike card-bike-detail">
+    <div class="bike-show-photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+      url('<%= cl_image_path @bike.photos.first.key, height: 500, crop: :fill %>')">
+    </div>
+      <div class="card-bike-infos">
+      <div>
+        <h2> <strong>Brand:</strong> <%= @bike.brand %></h2>
+        <h2><strong>Price:</strong> $<%= @bike.price %>/day</h2>
+        <br>
+        <p><strong>Owner:</strong> <%= @bike.user.first_name %></p>
+        <p><strong>Description:</strong> <%= @bike.description %></p>
       </div>
-        <div class="col-xs-12 col-xl-4">
-          <div class=form-container>
-            <div class="header">
-              <h2>$50/day</h2>
-            </div>
-          <%= link_to "Book Now!", root_path, class: "btn btn-primary btn-lg" %>
-          </div>
-        </div>
+      <%= link_to "Book Now!", new_bike_booking_path(@bike), class: "btn btn-primary btn-lg" %>
     </div>
   </div>
-  <%= render 'shared/footer' %>
 </div>
