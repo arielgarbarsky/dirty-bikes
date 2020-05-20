@@ -3,7 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
-# ~~ dirty-bikes-team DEV GEMS~~ 
+# ~~ dirty-bikes-team DEV GEMS~~
+gem 'cloudinary', '~> 1.12.0'
 gem 'devise'
 gem 'faker', '~> 1.6', '>= 1.6.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

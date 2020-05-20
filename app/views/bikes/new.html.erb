@@ -11,10 +11,10 @@
     <div class= "create-bike-form col-4">
       <strong>Add the details of your bike:</strong>
       <%= simple_form_for(@bike) do |f| %>
-      <%= f.input :brand,collection: ["Honda", "Fantic", "KTM", "Yamaha", "Suzuki", "Cyberquad"], include_blank: false %>
-      <%= f.input :price, as: :numeric, placeholder: 'Price in Shekels (rounded)'%>
+      <%= f.input :brand, collection: %w[Honda Fantic KTM Yamaha Suzuki Cyberquad], include_blank: false %>
+      <%= f.input :price, as: :numeric, placeholder: 'List Price (shekels)'%>
       <%= f.input :location, collection: ["Israel"], include_blank: false %>
-      <%#= f.input :photo (WE HAVE TO DECIDE IF WE USE CLOUDINARY OR NOT... BECAUSE IT WAS NOT WORKING) %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
       <%= f.button :submit, 'Create Dirt Bike', class: 'btn btn-dark' %>
       <% end %>
     </div>
