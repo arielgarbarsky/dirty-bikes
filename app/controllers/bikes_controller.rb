@@ -3,7 +3,7 @@ class BikesController < ApplicationController
     @bike = Bike.new
   end
 
-  def show
-    @bike = Bike.new
+  def index
+    @bikes = Bike.all
   end
 end
