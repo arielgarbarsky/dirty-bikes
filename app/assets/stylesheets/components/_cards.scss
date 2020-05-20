@@ -95,14 +95,13 @@
 .container-cards-index-page {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 15px;
+  grid-gap: 50px;
   justify-items: center;
 }
 
-//
 .card-bike-index-page {
   overflow: hidden;
-  height: 120px;
+  height: 140px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -128,7 +127,7 @@
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
-  margin-top: 8px;
+  margin-top: 10px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -136,4 +135,8 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+.button-card-index-page {
+  margin-top: 10px;
 }
