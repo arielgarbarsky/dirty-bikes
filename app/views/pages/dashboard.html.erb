@@ -1,61 +1,20 @@
 <div class="container">
-  <h1>My Dirt Bikes</h1>
-  <div class="row justify-center">
-    <div class="row col-7">
-      <ul class="dashboard-container">
-        <% current_user.bikes.each do |bike| %>
-        <div class="card-product-db mt-4">
-          <div class="card-product-infos-db">
-            <h3><%= bike.brand %></h3>
-            <h3><%= bike.price %> € / per day</h3>
-            <div class="d-flex">
-              <%= button_to "See my bike", bike_path(bike), :class => "btn button mr-2", :method => :get %>
-              </div>
-            </div>
-          <button class="btn-db btn-primary-db" type="button" data-toggle="collapse" data-target="#bike<%= bike.id %>" aria-expanded="false" aria-controls="collapseExample">
-            See your bookings
-            <br><i class="far fa-arrow-alt-circle-right"></i>
-          </button>
-          </div>
-          <% end %>
-        </ul>
+  <div class="dashbaord">
+    <h1>Your Dashboard</h1>
+    <div class = "info-card">
+          <img src="https://images.unsplash.com/photo-1525013066836-c6090f0ad9d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+      <div class= "welcome-card">
+      <h2> Hey <%= current_user.username.capitalize%></h2>
+      <p> Your status: <%= current_user.bikes.length %> uploaded - <%= current_user.bookings.length %> bookings</p>
       </div>
-      <div class="row col-5">
-        <% current_user.bikes.each do |bike| %>
-          <div class="collapse ml-2">
-            <%= bike.brand %>'s Reservations
-          </div>
-          <div class="notification" id="details-<%=  bike.id %>" >
-            <h2 class="notification-content">Total Bookings : <%= bike.bookings.length %> |
-            <% price = [] %>
-            <% bike.bookings.each do |booking| %>
-            <% end %>
-            <strong><%= price.inject(0){|sum,x| sum + x } %> € </strong></h2>
-          </div>
-          <% bike.bookings.each do |booking| %>
-          <div class="notification">
-            <div class="notification-content">
-              <p>Rented by : <%= User.find(booking.user_id).username %></p>
-            </div>
-              <% end %>
-          </div>
-        <% end %>
+      </div>
+      <div class="dashboard-flex">
+        <%= render "my_bikes" %>
+        <%= render "my_bookings" %>
       </div>
   </div>
-      <h1>Bikes I booked</h1>
-      <div class="row justify-center">
-        <div class="row">
-          <ul>
-            <% current_user.bookings.each do |booking| %>
-            <%= link_to(bike_path(booking.bike)) do %>
-            <div class="card-product-db mt-4">
-              <div class="card-product-infos-db">
-                <h2><%= booking.bike.brand %></h2>
-              </div>
-            </div>
-            <% end %>
-            <% end %>
-          </ul>
-        </div>
-      </div>
 </div>
+
+
+
+

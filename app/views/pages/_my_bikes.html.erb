@@ -1,0 +1,26 @@
+ <div class = "card-db-bikes">
+  <h2>My Bikes</h2>
+  <hr class="h-line" width="200" align="left">
+  <% if current_user.bikes.any? %>
+  <% current_user.bikes.each do |bike| %>
+  <div class="db-booking-card">
+    <div class = "db-booking-img">
+      <%= cl_image_tag bike.photos.first.key %>
+    </div>
+    <div class="db-booking-info">
+      <p><%= bike.brand %> </p>
+      <p><%= bike.description %> </p>
+      <p><%= bike.price %> $/day </p>
+    </div>
+  </div>
+  <% end %>
+  <% else %>
+  <div class = "empty-card">
+    <h3> No bikes from you so far</h3>
+    <%= link_to "here yo go", bikes_path %>
+  </div>
+  <% end %>
+</div>
+
+
+

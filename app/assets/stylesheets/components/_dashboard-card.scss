@@ -1,207 +1,43 @@
-.card-product-db {
-  overflow: hidden;
-  height: 200px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+.info-card {
+  background-color: blue;
   display: flex;
-  align-items: top;
-  width: 100%;
-  &:hover {
-    border: 3px solid #ea5455;
-  }
-}
-a {
-  text-decoration: none !important;
-  color: inherit !important;
-}
-.card-product-db img {
-  height: 100%;
-  width: 140px;
-  object-fit: cover;
-}
-.card-product-db h2 {
-  font-size: 18px;
-  margin: 0;
-}
-.card-product-db p {
-  font-size: 15px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
-.card-product-db .btn-primary {
-  padding: 16px;
-}
-.card-product-db .card-product-infos-db {
-  padding: 16px;
-}
-.card-product-db .card-product-infos-db h3 {
-  font-size: 20px;
 }
 
-.btn-primary-db {
-    color: white;
-    background-color: #2d4059;
-}
-
-.card-category {
-  background-size: cover;
-  background-position: center;
-  height: 180px;
+.dashboard-flex {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-.dashboard-container {
-  padding-left: 0;
-}
-.dashboard-container .card-product {
-  overflow: hidden;
-  height: 200px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: top;
-  width: 600px;
-}
-.dashboard-container .button {
-  font-size: 12px;
-  padding: 4px 6px;
-}
-.dashboard-container .btn-primary {
-  &:hover{
-    background-color: #E5272A;
-    ;
-  }
-}
-.dashboard-container .card-product {
-  &:hover {
-    border: none;
-  }
-}
-$base-margin: 20px;
-$blue: #2d4059;
-$tab-height: 35px;
-$tab-border-radius: 35px;
-body{
-  background: rgba($blue, 0.07);
-  font-family: ‘Roboto’, sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.66667;
-}
-.container{
-  width: 75%;
-  margin: 3rem auto;
-}
-// h2{
-//   color: $blue;
-//   font-size: 24px;
-//   line-height: 1.25;
-//   font-family: “Roboto Slab”, serif;
-//   margin-top: $base-margin;
-//   margin-bottom: $base-margin;
-// }
-.tab-slider--nav{
-  width: 100%;
-  float: left;
-  margin-bottom: $base-margin;
-}
-.tab-slider--tabs{
-  display: block;
-  float: left;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  position: relative;
-  border-radius: $tab-border-radius;
-  overflow: hidden;
-  background: #fff;
-  height: $tab-height;
-  user-select: none;
-  &:after{
-    content: “”;
-    width: 50%;
-    background: $blue;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all 250ms ease-in-out;
-    border-radius: $tab-border-radius;
-  }
-  &.slide:after{
-    left: 50%;
-  }
-}
-.tab-slider--trigger {
-  font-size: 12px;
-  line-height: 1;
-  font-weight: bold;
-  color: $blue;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 11px $base-margin;
-  position: relative;
-  z-index: 2;
-  cursor: pointer;
-  display: inline-block;
-  transition: color 250ms ease-in-out;
-  user-select: none;
-  &.active {
-    color: #fff;
-  }
-}
-.tab-slider--body{
-  margin-bottom: $base-margin;
-}
-
-.button {
-  color: $blue;
-    background-color: transparent;
-    background-image: none;
-    border-color: $blue;
-    border-radius: 5px;
-    &:hover {
-      color: white !important;
-      background-color: $blue;
-      border-color: $blue;
-    }
-}
-
-.d-flex {
-  display: flex !important;
-}
-
-
-.notification {
-  display: flex;
-  align-items: center;
-  margin-bottom: 8px;
-  background: white;
-  padding: 8px 16px;
-  border: 1px solid rgb(235,235,235);
-}
-
-.notification .notification-content {
   flex-grow: 1;
-  padding: 0 24px;
+  text-align: center;
+
+
 }
 
-.notification p {
-  margin: 0;
-  line-height: 1.4;
+.card-db-bikes {
+  background-color: white;
+  padding: 16px;
+  width: 50%;
 }
 
-.notification small {
-  color: #f07b3f;
-  font-weight: bold;
+
+.card-db-bookings {
+  background-color: white;
+  padding: 16px;
+  width: 50%;
 }
+
+.db-booking-card {
+  background-color: white;
+  display: flex;
+}
+.db-booking-info {
+  background-color: yellow;
+}
+
+.empty-card {
+  background-color: orange;
+}
+
+.welcome-card {
+  display: block;
+}
+
 
