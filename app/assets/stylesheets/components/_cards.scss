@@ -1,3 +1,5 @@
+//////////////////////HOME-PAGE////////////////////////
+
 .cards-bike-homepage {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -91,16 +93,25 @@
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 25px;
+  border-radius: 7px;
+}
+
+.buttons-card-homepage {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  height: 50px;
+  color: white;
+  text-align: center;
 }
 
 .button-inside-bike-card {
   font-size: 20px;
   font-weight: bold;
-  width: 150px;
-  height: 50px;
+  width: 130px;
+  height: 40px;
   border-radius: 7px;
-  margin-top: 5px;
+  opacity: 0.9;
 }
 
 .card-individual-bike {
@@ -135,6 +146,8 @@
 .container {
   margin-top: 10px;
 }
+
+//////////////////////INDEX-PAGE////////////////////////
 
 .container-cards-index-page {
   display: grid;
@@ -182,6 +195,11 @@
 }
 
 
+.button-card-index-page {
+  margin-top: 10px;
+  height: 100%;
+}
+
 .card-bike-detail {
   margin: 0 auto;
   width: 100%;
@@ -193,5 +211,4 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
 }
