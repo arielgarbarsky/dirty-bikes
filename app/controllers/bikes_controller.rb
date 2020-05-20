@@ -3,7 +3,24 @@ class BikesController < ApplicationController
     @bike = Bike.new
   end
 
+  def create
+    @bike = Bike.new(bike_params)
+    @bike.user = current_user
+
+    if @bike.save
+      redirect_to @bike, notice: 'Your Dirt Bike was added! 🚵‍♂️'
+    else
+      render :new
+    end
+  end
+
   def show
-    @bike = Bike.new
+    @booking = Booking.new
+  end
+
+  private
+
+  def bike_params
+    params.require(:bike).permit(:brand, :price, :location, photos: [])
   end
 end

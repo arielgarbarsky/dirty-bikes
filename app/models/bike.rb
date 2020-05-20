@@ -1,9 +1,9 @@
 class Bike < ApplicationRecord
   belongs_to :user
   has_many :bookings
+  has_many_attached :photos
 
-  validates :brand, inclusion: { in: %w(honda fantic ktm yamaha suzuki cyberquad) }
+  validates :brand, inclusion: { in: %w[Honda Fantic KTM Yamaha Suzuki Cyberquad] }
   validates :user, presence: true
-  validates :price, presence: true
-  validates_numericality_of :price
+  validates :price, numericality: { only_integer: true }
 end
