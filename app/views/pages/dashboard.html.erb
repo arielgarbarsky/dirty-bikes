@@ -2,17 +2,21 @@
   <div class="dashbaord">
     <h1>Your Dashboard</h1>
     <div class = "info-card">
-          <img src="https://images.unsplash.com/photo-1525013066836-c6090f0ad9d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+      <img src="https://images.unsplash.com/photo-1525013066836-c6090f0ad9d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
       <div class= "welcome-card">
-      <h2> Hey <%= current_user.username.capitalize%></h2>
-      <p> Your status: <%= current_user.bikes.length %> uploaded - <%= current_user.bookings.length %> bookings</p>
-      </div>
-      </div>
-      <div class="dashboard-flex">
-        <%= render "my_bikes" %>
-        <%= render "my_bookings" %>
-      </div>
+        <h2> Hey <%= current_user.username.capitalize%></h2>
+        <p> Welcome to your Dashboard. </br>
+        Here you have an overview of your activities. </br>
+        Your status: <%= current_user.bikes.length %> uploads and </br>
+        <%= current_user.bookings.length %> bookings.
+      </p>
+    </div>
   </div>
+  <div class="dashboard-flex">
+    <%= render "my_bikes" %>
+    <%= render "my_bookings" %>
+  </div>
+</div>
 </div>
 
 

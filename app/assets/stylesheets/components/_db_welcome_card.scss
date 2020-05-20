@@ -1,0 +1,21 @@
+.info-card {
+  display: flex;
+  align-item: center;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 8px;
+  & img {
+    border-radius: 8px 0px 0px 8px;
+    width: 60%;
+  }
+}
+
+.welcome-card {
+  display: block;
+      padding: 20px;
+}
+.dashboard-flex {
+  display: flex;
+  flex-grow: 1;
+  text-align: center;
+}
