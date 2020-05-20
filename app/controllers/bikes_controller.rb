@@ -6,7 +6,12 @@ class BikesController < ApplicationController
   end
 
   def index
-    @bikes = Bike.all
+    if params[:query].present?
+     sql_query = "brand ILIKE :query OR location ILIKE :query"
+      @bikes = Bike.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @bikes = Bike.all
+    end
   end
 
   def create
