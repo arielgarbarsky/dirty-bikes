@@ -1,5 +1,5 @@
 <div class="card-db-bookings">
-  <h2>My Bookings</h2>
+  <h2 id="title-bike">Past bookings</h2>
   <hr class="h-line" width="auto" align="left">
   <% if current_user.bookings.any? %>
   <% current_user.bookings.each do |booking| %>

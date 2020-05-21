@@ -4,21 +4,22 @@
       <h1><em>Your Dashboard</em></h1>
     </div>
   </div>
-  <div class="container">
-      <div class = "info-card">
-        <img src="https://images.unsplash.com/photo-1525013066836-c6090f0ad9d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
-        <div class= "welcome-card">
-          <h2> Hey <%= current_user.first_name.capitalize%></h2>
-          <p> Welcome to your Dashboard. </br>
-            Here you have an overview of your activities. </br>
-            Your status: <%= current_user.bikes.length %> uploads and </br>
-            <%= current_user.bookings.length %> bookings.
-          </p>
-        </div>
+<div class="container">
+  <div class="dashbaord">
+    <div class = "info-card">
+      <img src="https://images.unsplash.com/photo-1525013066836-c6090f0ad9d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+      <div class= "welcome-card">
+        <ul>
+        <h2> Hey <%= current_user.first_name.capitalize%>,</h2>
+        <br>
+        <p> Here's your activity: <br>
+          <br>
+          <strong><%= current_user.bikes.length %></strong> bike(s) rented out </br>
+          <strong><%= current_user.bookings.length %></strong> booking(s)
+        </p>
+        </ul>
       </div>
-      <div class="dashboard-flex">
-        <%= render "my_bikes" %>
-        <%= render "my_bookings" %>
-      </div>
-  </div>
-</div>
+    </div>
+    <div class="dashboard-flex">
+      <%= render "my_bikes" %>
+      <%= render "my_bookings" %>
