@@ -3,6 +3,16 @@
   background: white;
 }
 
+.nav-item a:hover{
+  box-shadow: inset 0 0 0 25px #f7f7f7;
+  border: solid;
+  border-color: #ffd460;
+}
+
+.nav-item {
+  padding-right: 15px;
+
+}
 .navbar .navbar-collapse {
   flex-grow: 0;
 }
@@ -21,3 +31,13 @@
 .navbar-bike-homepage .navbar-brand img {
   width: 40px;
 }
+
+.title-navbar {
+  font-size: 50px;
+  margin-right: 700px;
+}
+
+.title-navbar a, a:hover{
+  color: #2d4059;
+}
+
