@@ -1,0 +1,28 @@
+ <div class = "card-db-bikes">
+  <h2>My Bikes</h2>
+  <hr class="h-line" width="auto" align="left">
+  <% if current_user.bikes.any? %>
+  <% current_user.bikes.each do |bike| %>
+  <div class="db-bike-card ">
+    <div class = "db-bike-img">
+      <%= cl_image_tag bike.photos.first.key %>
+    </div>
+    <div class="db-bike-info">
+     <h3 class="card-title"><%= bike.brand %></h3>
+     <p class="card-text">Pick up in: <%= bike.location %></br>
+      $<%= bike.price %>
+    </p>
+  </div>
+</div>
+<% end %>
+<% else %>
+<div class = "empty-card">
+  <h3> No bikes from you so far</h3>
+  <div class="button-card-index-page">
+    <%= link_to "here yo go", bikes_path %>
+  </div>
+</div>
+<% end %>
+</div>
+
+

@@ -1,0 +1,50 @@
+.card-db-bikes {
+  background-color: #ffd460;
+  padding: 16px;
+  width: 50%;
+  margin-right: 15px;
+  border-radius: 8px;
+  &h2 {
+    font-weight: bold;
+  }
+}
+
+
+.card-db-bookings {
+  background-color: #ffd460;
+  padding: 16px;
+  width: 50%;
+  border-radius: 8px;
+  &h2 {
+    font-weight: bold;
+  }
+}
+
+.db-bike-card {
+  display: flex;
+  background-color: white;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+
+.db-bike-img img {
+  border-radius: 4px 0px 0px 4px;
+  height: 100%;
+  width: 150px;
+}
+
+.db-bike-info {
+  padding: 10px;
+
+}
+
+.db-booking-img img {
+  border-radius: 4px 0px 0px 4px;
+  height: 100%;
+  width: 150px;
+}
+
+.db-booking-info {
+  padding: 10px;
+}
