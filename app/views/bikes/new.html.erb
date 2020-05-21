@@ -1,29 +1,36 @@
-<div class="container col-12">
-  <div class="row" >
-    <div class="col-4">
-      <div class="card-container-image-simple-form">
-        <div class="card-category-image-simple-form" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1525012758503-e9e7c93032b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)">
-          <h1 class="title-image-card-simple-form">Experience the country by Dirt Bike!</h1>
+<div class="container py-1 ">
+  <div class="row">
+    <div class="px-5 col-md-12 m-3 border-bottom">
+      <h1><em>Make money - <strong>rent</strong> your bike.</em></h1>
+    </div>
+  </div>
+  <div class="container col-12">
+    <div class="row" >
+      <div class="col-4">
+        <div class="card-container-image-simple-form">
+          <div class="card-category-image-simple-form" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1525012758503-e9e7c93032b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)">
+            <h1 class="title-image-card-simple-form">Experience the country by Dirt Bike!</h1>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class= "create-bike-form col-4">
-      <strong>Add the details of your bike:</strong>
-      <%= simple_form_for(@bike) do |f| %>
-      <%= f.input :brand, collection: %w[Honda Fantic KTM Yamaha Suzuki Cyberquad], include_blank: false %>
-      <%= f.input :price, as: :numeric, placeholder: 'List Price (shekels)'%>
-      <%= f.input :location, placeholder: 'Rishon' %>
-      <%= f.input :description, as: :text, placeholder: "Tell us in a few words why you're bike is the awesomest!" %>
-      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-      <%= f.button :submit, 'Create Dirt Bike', class: 'btn btn-dark' %>
-      <% end %>
-    </div>
+      <div class= "create-bike-form col-4">
+        <strong>Add the details of your bike:</strong>
+        <%= simple_form_for(@bike) do |f| %>
+        <%= f.input :brand, collection: %w[Honda Fantic KTM Yamaha Suzuki Cyberquad], include_blank: false %>
+        <%= f.input :price, as: :numeric, placeholder: '($) List Price '%>
+        <%= f.input :location, placeholder: 'Rishon' %>
+        <%= f.input :description, as: :text, placeholder: "Tell us in a few words why you're bike is the awesomest!" %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <%= f.button :submit, 'Create Dirt Bike', class: 'btn btn-dark mb-2' %>
+        <% end %>
+      </div>
 
-    <div class="col-4">
-      <div class="card-container-image-simple-form">
-        <div class="card-category-image-simple-form" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1453901593090-e57bfb58f39b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=801&q=80)">
-          <h1 class="title-image-card-simple-form">Live wonderful experiences with the best Dirt Bike!</h1>
+      <div class="col-4">
+        <div class="card-container-image-simple-form">
+          <div class="card-category-image-simple-form" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1453901593090-e57bfb58f39b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=801&q=80)">
+            <h1 class="title-image-card-simple-form">Live wonderful experiences with the best Dirt Bike!</h1>
+          </div>
         </div>
       </div>
     </div>
