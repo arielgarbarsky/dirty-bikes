@@ -1,4 +1,51 @@
-<h1>Booking Summary for <%= @bike.user.first_name %>'s dirt bike!</h1>
+<div class="container py-2 ">
 
+  <div class="row">
+    <div class="col-md-12 mt-2 mb-3">
+      <h1>Booking Summary for <strong><%= @bike.user.first_name.capitalize %>'s</strong> dirt bike!</h1>
+    </div>
+  
+    <div class="col-md-4">
+      <div class="card p-3 mb-2">
+        <p><strong><%= @bike.brand.upcase %></strong></p>
+        <p><small><strong>Pickup in:</strong> <%= @bike.location %></small></p>
+        <span>Daily rate of $<%= @bike.price %></span>
+      </div>
+    </div>
 
-<%= render 'form', booking: @booking %>
+    <div class="col-md-4">
+      <div class="card p-3 mb-2">
+        <%= simple_form_for([@bike, @booking]) do |f| %>
+          <%= f.error_notification %>
+          <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+            <div class="form-inputs mb-2">
+              <strong><%= f.input :rent_date, label: 'Choose a Rent Date' %></strong>
+            </div>
+
+          <button type="button" class="form-actions btn btn-primary btn-block ">
+            <%= f.button :submit, "Book Dirt Bike!", class: "" %>
+        <% end %>
+          </button>
+          <div class="d-flex justify-content-between mt-3 border-bottom">
+          </div>
+          <div class="d-flex justify-content-between mt-3">
+            <p><strong>Total</strong></p>
+            <p><strong>$<%= @bike.price %></strong></p>
+          </div>
+      </div>
+    </div>
+
+    <div class="container col-md-4 mt-0">
+      <div class="card-bike">
+        <div class="bike-show-photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+          url('<%= cl_image_path @bike.photos.first.key, width: 350, height: 350, crop: :scale %>')">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2><em>&nbsp;&nbsp;&nbsp;GET READY TO HIT THE DIRT!</em> </h2>
+
+</div>
