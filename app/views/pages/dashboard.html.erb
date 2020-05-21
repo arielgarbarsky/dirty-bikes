@@ -12,11 +12,10 @@
         <ul>
         <h2> Hey <%= current_user.first_name.capitalize%>,</h2>
         <br>
-        <p> Here's your dashboard <br>
+        <p> Here's your activity: <br>
           <br>
-
-          Activity: <strong><%= current_user.bikes.length %></strong> bike(s) rented out and </br>
-          <strong><%= current_user.bookings.length %></strong> booking(s).
+          <strong><%= current_user.bikes.length %></strong> bike(s) rented out </br>
+          <strong><%= current_user.bookings.length %></strong> booking(s)
         </p>
         </ul>
       </div>
