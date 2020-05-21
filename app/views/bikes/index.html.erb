@@ -1,15 +1,22 @@
-<div class="container container-cards-index-page">
-  <% @bikes.each do |bike| %>
-  <div class="card-product card-bike-index-page">
-    <img src="https://source.unsplash.com/random" />
-    <div class="card-product-infos">
-      <h2 class="card-title"><%= bike.brand %></h2>
-      <p class="card-text">$<%= bike.price %></p>
-      <p class="card-text">Pick up in: <%= bike.location %></p>
-      <div class="button-card-index-page">
-        <a href="<%= bike_path(bike) %>" class="btn-sm btn-dark">See more</a>
-      </div>
+<div class="container py-1 ">
+  <div class="row">
+    <div class="px-5 col-md-12 m-3 border-bottom">
+      <h1><em>Choose one of our <strong>dirty</strong> bikes below!</em></h1>
     </div>
   </div>
-  <% end %>
+  <div class="container container-cards-index-page">
+    <% @bikes.each do |bike| %>
+    <div class="card-product card-bike-index-page">
+      <img src="https://source.unsplash.com/random" />
+      <div class="card-product-infos">
+        <h2 class="card-title"><%= bike.brand %></h2>
+        <p class="card-text">$<%= bike.price %></p>
+        <p class="card-text">Pick up in: <%= bike.location %></p>
+        <div class="button-card-index-page">
+          <a href="<%= bike_path(bike) %>" class="btn-sm btn-dark">See more</a>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
 </div>
