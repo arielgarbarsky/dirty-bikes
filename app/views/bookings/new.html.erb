@@ -1,15 +1,16 @@
 <div class="container py-2 ">
 
   <div class="row">
-    <div class="col-md-12 mt-2 mb-3">
-      <h1>Booking Summary for <strong><%= @bike.user.first_name.capitalize %>'s</strong> dirt bike!</h1>
+    <div class="px-5 col-md-12 m-3 border-bottom">
+      <h1><em>Finalize booking..</em></h1>
     </div>
   
     <div class="col-md-4">
       <div class="card p-3 mb-2">
         <p><strong><%= @bike.brand.upcase %></strong></p>
-        <p><small><strong>Pickup in:</strong> <%= @bike.location %></small></p>
-        <span>Daily rate of $<%= @bike.price %></span>
+        <p><small><strong>Pickup from:</strong> <%= @bike.user.first_name.capitalize %></small></p>
+        <p><small><strong>At:</strong> <%= @bike.location %></small></p>
+        <p>Daily rate of $<%= @bike.price %></p>
       </div>
     </div>
 
