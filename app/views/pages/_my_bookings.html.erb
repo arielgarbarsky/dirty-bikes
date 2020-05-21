@@ -1,24 +1,26 @@
-  <div class="card-db-bookings">
-    <h2>My Bookings</h2>
-    <hr class="h-line" width="auto" align="left">
-    <% if current_user.bookings.any? %>
-    <% current_user.bookings.each do |booking| %>
-    <div class="db-booking-card">
-      <div class = "db-booking-img">
-        <%= cl_image_tag booking.bike.photos.first.key %>
-      </div>
-      <div class="db-booking-info">
-        <h3 class="card-title"><%= booking.bike.brand %></h3>
-        <p class="card-text">Pick up in: <%= booking.bike.location %></p>
-        <p class="card-text">$<%= booking.bike.price %></p>
-        <p> Booked from: <%= booking.user.username %> </p>
-      </div>
+<div class="card-db-bookings">
+  <h2>My Bookings</h2>
+  <hr class="h-line" width="auto" align="left">
+  <% if current_user.bookings.any? %>
+  <% current_user.bookings.each do |booking| %>
+  <%= link_to bike_path(booking.bike), class: "bike-link-card" do %>
+  <div class="db-bike-card">
+    <div class = "db-bike-img">
+      <%= cl_image_tag booking.bike.photos.first.key %>
     </div>
-    <% end %>
-    <% else %>
-    <div class = "empty-card">
-      <h3> Nothing booked yet</h3>
-      <%= link_to "Book a bike", bikes_path, class: "btn-empty-card" %>
+    <div class="db-bike-info">
+      <h3 class="card-title"><%= booking.bike.brand %></h3>
+      <p class="card-text">Pick up in: <%= booking.bike.location %></br>
+        $<%= booking.bike.price %>
+      </p>
     </div>
-    <% end %>
   </div>
+  <% end %>
+  <% end %>
+  <% else %>
+  <div class = "empty-card">
+    <h3> Nothing booked yet</h3>
+    <%= link_to "Book a bike", bikes_path, class: "btn-empty-card" %>
+  </div>
+  <% end %>
+</div>
