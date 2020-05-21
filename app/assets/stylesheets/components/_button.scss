@@ -1,8 +1,19 @@
-.btn-primary, .btn-primary:active, .btn-primary:visited {
-    color: black
+.btn-primary, .btn-primary:active, .btn-primary:visited, .btn-primary a {
+    color: black;
 }
 
- .btn-primary:hover {
+.btn-primary:hover {
   background-color: #FFD460;
   opacity: 0.9;
+  border-color: black;
+
+  a {
+    text-decoration: none;
+  }
  }
+
+.button-inside-bike-card, .btn btn-primary {
+  width: 100%
+}
+
+
