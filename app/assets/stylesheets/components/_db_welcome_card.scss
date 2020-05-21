@@ -4,6 +4,8 @@
   margin-bottom: 20px;
   background-color: white;
   border-radius: 8px;
+  height: 20rem;
+    border: 1px solid #fbd35f;
   & img {
     border-radius: 8px 0px 0px 8px;
     width: 60%;
@@ -19,3 +21,13 @@
   flex-grow: 1;
   text-align: center;
 }
+
+.bike-link-card {
+  color: black;
+  &:hover {
+    text-decoration: none;
+    color: #ea5455;
+  }
+}
+
+

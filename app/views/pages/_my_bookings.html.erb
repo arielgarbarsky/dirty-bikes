@@ -8,9 +8,9 @@
         <%= cl_image_tag booking.bike.photos.first.key %>
       </div>
       <div class="db-booking-info">
-        <h3 class="card-title"><%= bike.brand %></h3>
-        <p class="card-text">Pick up in: <%= bike.location %></p>
-        <p class="card-text">$<%= bike.price %></p>
+        <h3 class="card-title"><%= booking.bike.brand %></h3>
+        <p class="card-text">Pick up in: <%= booking.bike.location %></p>
+        <p class="card-text">$<%= booking.bike.price %></p>
         <p> Booked from: <%= booking.user.username %> </p>
       </div>
     </div>
