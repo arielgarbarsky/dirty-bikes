@@ -1,15 +1,20 @@
 <div class="container container-cards-index-page">
   <% @bikes.each do |bike| %>
   <div class="card-product card-bike-index-page">
-    <img src="https://source.unsplash.com/random" />
+    <% if bike.photos.attached? %>
+    <%= cl_image_tag bike.photos.first.key %>
+      <% else %>
+      <div><%= image_tag 'https://source.unsplash.com/random' %></div>
+    <% end %>
     <div class="card-product-infos">
-      <h2 class="card-title"><%= bike.brand %></h2>
-      <p class="card-text">$<%= bike.price %></p>
-      <p class="card-text">Pick up in: <%= bike.location %></p>
+      <div class="bike-brand-insidecard"><h2 class="card-title"><%= bike.brand.capitalize %></h2></div>
+      <div class="bike-price-insidecard"><p class="card-text"><strong>$<%= bike.price %></strong></p></div>
+      <div class="bike-location-insidecard"><p class="card-text">Pick up in: <%= bike.location.capitalize %></p></div>
       <div class="button-card-index-page">
-        <a href="<%= bike_path(bike) %>" class="btn-sm btn-dark">See more</a>
+        <div class="button-inside-card-indexpage"><a href="<%= bike_path(bike) %>" class="btn-sm btn-primary">See more</a></div>
       </div>
     </div>
   </div>
   <% end %>
 </div>
+

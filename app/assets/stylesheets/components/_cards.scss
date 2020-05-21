@@ -151,26 +151,34 @@
 
 .container-cards-index-page {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 50px;
   justify-items: center;
 }
 
 .card-bike-index-page {
   overflow: hidden;
-  height: 140px;
+  height: 150px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  min-width: 350px;
+  min-width: 400px;
   max-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-bike-index-page img {
   height: 100%;
   width: 120px;
   object-fit: cover;
+}
+
+.images-inside-indexpage-card {
+  height: 100%;
+  width: 100%;
 }
 
 .card-product h2 {
@@ -192,8 +200,8 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+  margin: 0 auto;
 }
-
 
 .button-card-index-page {
   margin-top: 10px;
@@ -211,4 +219,24 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+h2.card-title {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p.card-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.button-inside-card-indexpage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
